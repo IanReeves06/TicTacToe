@@ -18,6 +18,7 @@ class TicTacToeGame:
     def start(self) -> None:
         while True:
             player = self.players[self.current_player]
+
             self.printer.print_board(self.board)
             self.printer.print_turn(player)
 
@@ -41,12 +42,15 @@ class TicTacToeGame:
             self.current_player = 1 - self.current_player
 
     def read_position(self) -> tuple[int, int]:
-        values = input("Reihe und Spalte, zum Beispiel 2 3: ").split()
+        values = input(
+            "Reihe und Spalte, zum Beispiel 2 3: "
+        ).split()
 
         if len(values) != 2:
             raise ValueError("Bitte genau zwei Zahlen eingeben.")
 
-        row, column = int(values[0]) - 1, int(values[1]) - 1
+        row = int(values[0]) - 1
+        column = int(values[1]) - 1
 
         if not 0 <= row < Board.SIZE or not 0 <= column < Board.SIZE:
             raise ValueError("Die Zahlen müssen zwischen 1 und 3 liegen.")

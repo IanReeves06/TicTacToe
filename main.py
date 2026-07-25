@@ -6,8 +6,8 @@ from player import Player
 
 def main() -> None:
     players = [
-        Player(input("Name Spieler 1: ") or "Spieler 1", "X"),
-        Player(input("Name Spieler 2: ") or "Spieler 2", "O")
+        Player("Spieler 1", "X"),
+        Player("Spieler 2", "O")
     ]
 
     game = TicTacToeGame(
