@@ -1,8 +1,13 @@
-Tic-Tac-Toe objektorientiert in Python
+Vereinfachtes objektorientiertes Tic-Tac-Toe
+
+Klassen:
+- Board
+- Player
+- ConsolePrinter
+- TicTacToeGame
+
+Die separate Stone-Klasse wurde entfernt.
+Der Spielstein wird direkt als Symbol im Player gespeichert.
 
 Start:
-1. ZIP-Datei entpacken.
-2. Terminal im Projektordner öffnen.
-3. Folgenden Befehl ausführen:
-
 python main.py
